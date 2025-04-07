@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Processed Code:</h2>
+    <pre><code id="code-output" style="white-space: pre-wrap;">{{ corrected_code }}</code></pre>
+    <button onclick="copyToClipboard()">Copy to Clipboard</button>
+    <br><br>
+
+    <script>
+        function copyToClipboard() {
+            const codeText = document.getElementById("code-output").innerText;
+            navigator.clipboard.writeText(codeText).then(() => {
+                alert("Code copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy: ", err);
+            });
+        }
+    </script>
+    <a href="/">Back to Home</a>
+</body>
+</html>

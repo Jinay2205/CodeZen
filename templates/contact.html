@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | Smart Code Assistant</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 720px;
+            margin: 60px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        p {
+            text-align: center;
+            color: #555;
+            margin-bottom: 40px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: 0.2s;
+        }
+        input:focus, textarea:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        button {
+            padding: 12px;
+            background-color: #3498db;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .social {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .social a {
+            margin: 0 10px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul {
+        list-style-type: none;
+        padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/methodology">Methodology</a></li>
+            </ul>
+        </nav>
+        <hr>
+
+        <h1>Contact the Team</h1>
+        <p>Have feedback or questions about the Smart Code Assistant? We’d love to hear from you!</p>
+
+        <form action="mailto:jinayshah2205@gmail.com,maahip1304@gmail.com" method="POST" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="social">
+            <p>Connect with us:</p>
+            <a href="https://github.com/your-repo" target="_blank">GitHub</a>
+            <a href="https://hub.docker.com/u/yourdockerhub" target="_blank">Docker Hub</a>
+            <a href="https://www.linkedin.com/in/jinay-shah-088331246" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Fixer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/methodology">Methodology</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <hr>
+    
+
+    <h2>Enter your code:</h2>
+    <form id="code-form" method="POST">
+        <textarea id="code-input" name="code" rows="10" cols="50"></textarea><br>
+    
+        <button type="submit" formaction="/bug_fixing">Find Bugs</button>
+        <button type="submit" formaction="/code_optimization">Optimize Code</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
