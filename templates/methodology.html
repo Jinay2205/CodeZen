@@ -2,66 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Methodology | Smart Code Assistant</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f6f9;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 960px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        h2 {
-            color: #34495e;
-        }
-        p {
-            line-height: 1.6;
-        }
-        code {
-            background: #eee;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 90%;
-        }
-        nav ul {
-        list-style-type: none;
-        padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-    </style>
+    <title>Methodology | CodeZen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-        <hr>
+    <nav>
+        <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container" data-aos="fade-up">
         <h1>Methodology</h1>
 
         <h2>1. Objective</h2>
         <p>
-            The goal of this project is to develop a smart code assistant that can analyze Python code to either identify bugs and correct them or optimize the code for better time and space complexity. This assistant is designed with usability, automation, and intelligent feedback in mind.
+            The goal of this project is to develop a smart code assistant that can analyze any code to either identify bugs and correct them or optimize the code for better time and space complexity. This assistant is designed with usability, automation, and intelligent feedback in mind.
         </p>
 
         <h2>2. Backend Intelligence: LLaMA 3.2:7B Model</h2>
@@ -95,8 +56,8 @@
         </p>
         <ul>
             <li>Code adheres to formatting and style guidelines</li>
-            <li>Tests (if any) are passed before deployment</li>
-            <li>Deployments are automated (in containerized setups or testing environments)</li>
+            <li>Tests are passed before deployment</li>
+            <li>Deployments are automated</li>
         </ul>
 
         <h2>6. Dockerization and Deployment</h2>
@@ -117,5 +78,14 @@
             This methodology blends AI and software engineering best practices into a single cohesive application. By combining a powerful LLM with a user-friendly Flask interface, Docker-based deployment, and CI/CD automation, the project delivers a robust and production-ready tool that showcases real-world development practices and technical maturity.
         </p>
     </div>
+
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
 </body>
 </html>
