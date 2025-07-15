@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template
 import requests
 
 app = Flask(__name__)
@@ -23,7 +23,7 @@ def chat_with_ollama(prompt, task):
             "\n**Example:**\n"
             "🔴 **Incorrect Fix:** `print('ho')` → `print('hello')` 🚫 **WRONG! DO NOT CHANGE!**\n"
             "✅ **Correct Fix:** `print('ho')` → `print('ho')` (if missing a closing quote)\n"
-            "\n**Return only the corrected code without explanations.**\n\n"
+            "\n**Return the corrected code with explanations.**\n\n"
             "**Code:**\n```python\n" + prompt + "\n```\n"
         )
     else:
@@ -39,7 +39,7 @@ def chat_with_ollama(prompt, task):
             "\n**Example:**\n"
             "🔴 **Incorrect Optimization:** `print('Processing...')` → `print('Working...')` 🚫 **WRONG! DO NOT CHANGE TEXT!**\n"
             "✅ **Correct Optimization:** Using set for faster lookup instead of looping through a list.\n"
-            "\n**Return only the optimized code without explanations.**\n\n"
+            "\n**Return the optimized code with explanations.**\n\n"
             "**Code:**\n```python\n" + prompt + "\n```\n"
         )
 

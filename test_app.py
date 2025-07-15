@@ -23,3 +23,6 @@ def test_contact() :
 def test_about() : 
     response = app.test_client().get("/about")
     assert response.status_code == 200
+
+
+    
